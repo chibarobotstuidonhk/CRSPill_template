@@ -16,6 +16,7 @@
  *
  ******************************************************************************
  */
+// このインクルードガードはill-formed(no diagnostic required)では？Cube IDE含めて処理系ってこと？？
 /* USER CODE END Header */
 /* Define to prevent recursive inclusion -------------------------------------*/
 #ifndef __CAN_H__
@@ -44,7 +45,7 @@ extern "C"
   /* USER CODE BEGIN Prototypes */
 
   // set up can to receive all can frame.
-  void can_setup();
+  void can_setup(void);
 
   /* USER CODE END Prototypes */
 

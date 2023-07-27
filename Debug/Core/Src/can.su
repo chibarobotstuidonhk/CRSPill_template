@@ -1,5 +1,5 @@
-../Core/Src/can.c:24:6:can_setup	48	static
-../Core/Src/can.c:55:6:MX_CAN_Init	8	static
-../Core/Src/can.c:87:6:HAL_CAN_MspInit	48	static
-../Core/Src/can.c:125:6:HAL_CAN_MspDeInit	16	static
-../Core/Src/can.c:151:6:HAL_CAN_RxFifo0MsgPendingCallback	56	static
+../Core/Src/can.c:31:6:MX_CAN_Init	8	static
+../Core/Src/can.c:62:6:HAL_CAN_MspInit	32	static
+../Core/Src/can.c:100:6:HAL_CAN_MspDeInit	8	static
+../Core/Src/can.c:126:6:HAL_CAN_RxFifo0MsgPendingCallback	48	static
+../Core/Src/can.c:137:6:can_setup	48	static

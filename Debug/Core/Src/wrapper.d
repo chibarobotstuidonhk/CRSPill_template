@@ -22,7 +22,7 @@ Core/Src/wrapper.o: ../Core/Src/wrapper.cpp ../Core/Inc/can.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h \
- ../Core/Inc/main.h ../Core/Inc/wapper.hpp
+ ../Core/Inc/main.h
 ../Core/Inc/can.h:
 ../Core/Inc/main.h:
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:
@@ -49,4 +49,3 @@ Core/Src/wrapper.o: ../Core/Src/wrapper.cpp ../Core/Inc/can.h \
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h:
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h:
 ../Core/Inc/main.h:
-../Core/Inc/wapper.hpp:

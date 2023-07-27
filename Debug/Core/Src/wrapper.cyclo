@@ -1,3 +1,3 @@
-wrapper.cpp:19:6:void can_callback(CAN_RxHeaderTypeDef*, uint8_t*)	2
-wrapper.cpp:27:6:void setup()	2
-wrapper.cpp:58:6:void loop()	3
+wrapper.cpp:20:17:void can_callback(CAN_RxHeaderTypeDef*, const uint8_t*)	2
+wrapper.cpp:42:19:Global setup()	2
+wrapper.cpp:76:17:void loop(Global)	3

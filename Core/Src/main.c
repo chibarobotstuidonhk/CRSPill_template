@@ -17,13 +17,13 @@
   */
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
+#include <wrapper.h>
 #include "main.h"
 #include "can.h"
 #include "gpio.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "wapper.hpp"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -95,6 +95,9 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+	  volatile char dummy = 0;  // おまじない
+	  (void)dummy;
+
 	  loop();
     /* USER CODE END WHILE */
 
@@ -157,6 +160,8 @@ void Error_Handler(void)
   __disable_irq();
   while (1)
   {
+	  volatile char dummy = 0; // おまじない
+	  (void)dummy;
   }
   /* USER CODE END Error_Handler_Debug */
 }
