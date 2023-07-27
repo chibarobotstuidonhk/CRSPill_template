@@ -95,10 +95,10 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-	  volatile char dummy = 0;  // おまじない
-	  (void)dummy;
+    volatile char dummy = 0;  // おまじない
+    (void)dummy;
 
-	  loop();
+    loop();
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */

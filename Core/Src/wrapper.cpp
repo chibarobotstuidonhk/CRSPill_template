@@ -36,10 +36,10 @@ STM32ではそこまでローカル変数を忌避する必要もないだろう
 struct Global
 {
 	CAN_TxHeaderTypeDef TxHeader;
-};
+} global{};
 
 //起動時に１度だけ呼ばれます。初期化をします。
-extern "C" Global setup(){
+extern "C" void setup(){
 	//LEDをチカチカ
 	for(int i = 0; i < 3; i++){
 		HAL_GPIO_WritePin(CAN_LED_GPIO_Port, CAN_LED_Pin, GPIO_PIN_SET);
@@ -65,15 +65,14 @@ extern "C" Global setup(){
 	TxHeader.DLC = 8;  // データ長は8バイトに
 	TxHeader.TransmitGlobalTime = DISABLE;
 
+	global.TxHeader = TxHeader;
+
 	//CANの初期化です。この後からCANの送受信が行われます。
 	can_setup();
-
-	return Global{TxHeader};
 }
 
-
 //ループです。実行中は呼ばれ続けます。
-extern "C" void loop(Global global){
+extern "C" void loop(){
 	//mailboxが一杯でなければCANを送信します。
 	if(0 < HAL_CAN_GetTxMailboxesFreeLevel(&hcan)){
 		global.TxHeader.StdId++;
